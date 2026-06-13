@@ -14,24 +14,20 @@ Clean dataset: 1,002 rows × 11 columns
 
 🚨 Data Quality Issues Found
 1. Inconsistent Categorical Values
-Multiple spelling variants, cases, and abbreviations were present across key fields:
-Gender: 14 unique variants found — Male, male, MALE, M, m, Male  (trailing space), Fem, f, F, FEMALE, female, Female  → standardised to Male / Female
-Severity: 17 unique variants — mild, MILD, mild , Crit, CRIT, critical, MOD, Mod, SEV, SEVERE, Moderate  → standardised to Mild / Moderate / Severe / Critical
-Insurance: 13 unique variants — Pub, PUBLIC, public, Priv, PRIVATE, Self Pay, SelfPay, SELF-PAY, self-pay → standardised to Public / Private / Self-Pay
+
 2. Invalid Clinical Values
-Negative ages: 6 records with negative age values (e.g., -5) — clinically impossible, flagged and removed
-Extreme outlier ages: Values as high as 999 — physiologically impossible, removed
-Valid age range after cleaning: 1–89 years
+
 3. Missing Values
 The raw dataset contained nulls across multiple columns
-4. Duplicate Records
-19 duplicate rows identified and removed
-Deduplication was based on Visit_ID as the primary key
+
+4. Duplicate
+
 5. Column Naming & Formatting
 Inconsistent casing and spacing in column headers standardised
 Verbose column names shortened for clarity (e.g., Length Of Stay(hours) from LOS_Hrs)
 
 🧹 Cleaning Steps Performed
+
 Removed duplicate rows based on Visit ID
 Standardised categorical fields — Gender, Severity, Insurance Type — using find-and-replace and consistent titling
 Removed invalid age entries — negative values and physiologically implausible outliers (age > 120)
