@@ -1,6 +1,4 @@
 🏥 Emergency Room Visits — Data Cleaning Project
-Author: Innocent Chukwuemeka
-Role: Medical Officer | Data Analyst
 Internship: DecodeLabs
 Tools: Microsoft Excel
 
